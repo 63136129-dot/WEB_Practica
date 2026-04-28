@@ -1,0 +1,135 @@
+:root {
+    --primary: #7b1e3f;
+    --whatsapp: #25d366;
+    --bg-dark: #0f172a;
+    --glass: rgba(30, 41, 59, 0.7);
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: white;
+}
+
+.contenedor-contactos {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.contactos-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.badge {
+    background: rgba(123, 30, 63, 0.2);
+    color: #ff4d8d;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid var(--primary);
+}
+
+/* Layout en dos columnas */
+.layout-contactos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+/* Tarjetas Estilo Glassmorphism */
+.card-info, .form-contacto {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 24px;
+}
+
+/* Estilos del Formulario */
+.grupo-input {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-input label {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.grupo-input input, .grupo-input textarea {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid #334155;
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+.grupo-input input:focus, .grupo-input textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 10px rgba(123, 30, 63, 0.3);
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(123, 30, 63, 0.4);
+}
+
+/* BOTÓN WHATSAPP PROFESIONAL */
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--whatsapp);
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1eb954;
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+}
+
+.dato-contacto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.dato-contacto i {
+    color: var(--primary);
+}
+
+.link-volver {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    color: #94a3b8;
+    text-decoration: none;
+}

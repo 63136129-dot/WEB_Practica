@@ -1,0 +1,162 @@
+/* Estilo Base */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0f172a; /* Fondo oscuro tecnológico */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.sobre-mi-card {
+    background: #ffffff;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border-top: 8px solid #7b1e3f; /* Tu color vino */
+}
+
+/* FOTO CIRCULAR PERFECTA */
+.foto-marco {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden; /* Esto hace que la foto sea circular */
+    border: 5px solid #7b1e3f;
+    box-shadow: 0 0 15px rgba(123, 30, 63, 0.5);
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la foto se estire */
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin: 10px 0;
+}
+
+.tagline {
+    color: #7b1e3f;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.perfil-datos {
+    text-align: left;
+    margin: 25px 0;
+}
+
+.dato-item {
+    display: flex;
+    align-items: center;
+    background: #f1f5f9;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.dato-item:hover {
+    background: #e2e8f0;
+    transform: scale(1.02);
+}
+
+.icono {
+    margin-right: 15px;
+}
+
+.boton-tech {
+    display: inline-block;
+    background: #7b1e3f;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.boton-tech:hover {
+    background: #1e293b;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+/* Sección Portafolio */
+.portafolio-seccion {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.titulo-proyectos {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* El Grid de 6 casillas */
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.proyecto-card {
+    background: #1e293b; /* Fondo azul oscuro */
+    border: 1px solid #334155;
+    border-radius: 15px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+/* Efecto Tech de Hover */
+.proyecto-card:hover {
+    transform: translateY(-10px);
+    border-color: #7b1e3f;
+    box-shadow: 0 10px 30px rgba(123, 30, 63, 0.4);
+}
+
+.proyecto-card h3 {
+    color: #f8fafc;
+    margin-top: 0;
+}
+
+.proyecto-card p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.tech-tag {
+    display: inline-block;
+    margin-top: 15px;
+    background: rgba(123, 30, 63, 0.2);
+    color: #ff4d8d; /* Un color rosa/vino neón */
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border: 1px solid #7b1e3f;
+}
+
+/* Ajuste para el contenedor principal para que quepa todo */
+.contenedor-perfil {
+    flex-direction: column; /* Alinea la card y el portafolio uno debajo del otro */
+    padding: 50px 20px;
+    min-height: 100vh;
+}
