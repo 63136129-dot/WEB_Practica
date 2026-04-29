@@ -251,19 +251,120 @@ h1,h2,h3 {
     text-align: center;
 }
 
-#btnTop {
-    display: none; /* Inicia oculto, el JS lo mostrará */
-    position: fixed; /* Esto lo hace flotar */
-    bottom: 30px;
-    right: 30px;
+.boton-ir-arriba {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     z-index: 9999;
-    width: 50px;
-    height: 50px;
-    background-color: #ff4a57; /* Tu color rojo */
+    background-color: #8c2a3e;
     color: white;
     border: none;
-    border-radius: 50%;
+    padding: 10px 20px; /* Le damos más espacio a los lados */
+    border-radius: 5px;  /* Cambiamos el círculo por un rectángulo redondeado */
+    font-size: 14px;     /* Bajamos un poco el tamaño de letra */
+    font-weight: bold;
     cursor: pointer;
-    font-size: 24px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+}
+
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+/* --- MODO OSCURO PROFESIONAL --- */
+body.dark-theme {
+    background-color: #121212 !important; /* Fondo general casi negro */
+    color: #e0e0e0 !important;            /* Texto gris suave, no blanco puro */
+}
+
+/* Oscurecer el Header (donde está tu nombre) */
+body.dark-theme header, 
+body.dark-theme .header {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Cambiar la barra de navegación roja a un tono más oscuro y elegante */
+body.dark-theme .nav-bg {
+    background-color: #1a1a1a !important;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-theme .navegacion-principal a {
+    color: #ffffff !important;
+}
+
+/* Tarjetas de servicios: Fondo oscuro con borde sutil */
+body.dark-theme .contenedor.sombra,
+body.dark-theme .servicios,
+body.dark-theme .servicio {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.5) !important;
+}
+
+/* El formulario de contacto */
+body.dark-theme .formulario {
+    background-color: #1a2a29 !important; /* Un verde muy oscuro */
+}
+
+body.dark-theme label {
+    color: #ffffff !important;
+}
+
+/* Inputs del formulario en modo oscuro */
+body.dark-theme .input-text {
+    background-color: #2b2b2b !important;
+    border: 1px solid #444 !important;
+    color: white !important;
+}
+
+/* --- ESTILO DEL BOTÓN DE LA LUNA --- */
+.boton-dark-mode {
+    position: fixed;     /* FLOTA en la pantalla */
+    bottom: 80px;        /* Lo subimos un poco para que no choque con el otro */
+    right: 20px;         /* Pegado a la derecha */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  /* Redondo */
+    border: none;
+    background-color: #333; /* Un gris oscuro para el botón */
+    color: white;        /* El color de la luna */
+    font-size: 24px;     /* Luna grande */
+    cursor: pointer;
+    z-index: 9999;       /* Por encima de TODO */
     box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease; /* Efecto suave */
+}
+
+/* Efecto al pasar el ratón */
+.boton-dark-mode:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+/* Esto forzará el fondo negro en las partes que quedaron grises */
+body.dark-theme, 
+body.dark-theme main, 
+body.dark-theme .servicios,
+body.dark-theme .contacto {
+    background-color: #000000 !important;
+}
+
+/* Para que el degradado del fondo no moleste */
+body.dark-theme {
+    background-image: none !important;
+}
+
+/* Los elementos empiezan invisibles y un poco más abajo */
+.revelar {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+/* Esta clase se la pondrá el JavaScript automáticamente al bajar */
+.revelar.activo {
+    opacity: 1;
+    transform: translateY(0);
 }
