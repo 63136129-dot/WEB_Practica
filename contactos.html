@@ -37,22 +37,24 @@
             </div>
         </section>
 
-        <section class="formulario-seccion">
-            <form class="form-contacto">
-                <div class="grupo-input">
-                    <label>Nombre Completo</label>
-                    <input type="text" placeholder="Escribe tu nombre..." required>
-                </div>
-                <div class="grupo-input">
-                    <label>Correo Electrónico</label>
-                    <input type="email" placeholder="email@ejemplo.com" required>
-                </div>
-                <div class="grupo-input">
-                    <label>Mensaje</label>
-                    <textarea rows="5" placeholder="¿En qué puedo ayudarte?"></textarea>
-                </div>
-                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
-            </form>
+      <form class="form-contacto" action="guardar.php" method="POST">
+    <div class="grupo-input">
+        <label>Nombre Completo</label>
+        <input type="text" name="nombre_completo" placeholder="Escribe tu nombre..." required>
+    </div>
+
+    <div class="grupo-input">
+        <label>Correo Electrónico</label>
+        <input type="email" name="correo_electronico" placeholder="email@ejemplo.com" required>
+    </div>
+
+    <div class="grupo-input">
+        <label>Mensaje</label>
+        <textarea name="mensaje" rows="5" placeholder="¿En qué puedo ayudarte?" required></textarea>
+    </div>
+
+    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+</form>
         </section>
     </div>
 

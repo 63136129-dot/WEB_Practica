@@ -5,6 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes - Casos de Éxito</title>
     <link rel="stylesheet" href="css/clientes.css">
+    <style>
+        /* Estilos adicionales para el formulario dentro de esta página */
+        .seccion-formulario {
+            margin-top: 50px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .formulario-testimonio {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .formulario-testimonio h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .grupo-input {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .grupo-input label {
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .grupo-input input, .grupo-input textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            background: #1a1a1a;
+            color: white;
+            font-family: inherit;
+        }
+
+        .boton-enviar {
+            background-color: #a03344; /* Color similar a tu botón Contactar */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .boton-enviar:hover {
+            background-color: #7a2633;
+        }
+    </style>
 </head>
 <body>
 
@@ -84,6 +146,29 @@
             </div>
         </div>
     </section>
+
+   <section class="seccion-formulario">
+    <form action="guardar.php" method="POST" class="formulario-testimonio">
+        <h2>Cuéntanos tu experiencia</h2>
+        
+        <div class="grupo-input">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ej. Ozil Esneyder">
+        </div>
+
+        <div class="grupo-input">
+            <label for="cargo">Cargo / Empresa</label>
+            <input type="text" id="cargo" name="cargo" required placeholder="Ej. Desarrollador Senior">
+        </div>
+
+        <div class="grupo-input">
+            <label for="mensaje">Tu Testimonio</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required placeholder="¿Cómo fue trabajar con nosotros?"></textarea>
+        </div>
+
+        <button type="submit" class="boton-enviar">Enviar Testimonio</button>
+    </form>
+</section>
 
     <div class="acciones">
         <a href="index.html" class="boton-moderno">Volver al Inicio</a>

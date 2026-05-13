@@ -89,25 +89,25 @@
     <!-- Seccion de Contacto con la clase revelar -->
     <section class="revelar">
         <h2>Contacto</h2>
-        <form class="formulario">
+         <form class="formulario" id="miFormulario" action="guardar.php" method="POST">
             <fieldset>
                 <legend>Contáctanos llenando todos los campos</legend>
                 <div class="contenedor-campos">
                     <div class="campo">
                         <label>Nombre</label>
-                        <input class="input-text" type="text" placeholder="Tu nombre">
+                        <input class="input-text" name="nombre" type="text" placeholder="Tu nombre">
                     </div>
                     <div class="campo">
                         <label>Teléfono</label>
-                        <input class="input-text" type="tel" placeholder="Tu teléfono">
+                        <input class="input-text" name="telefono" type="tel" placeholder="Tu teléfono">
                     </div>
                     <div class="campo">
                         <label>Correo</label>
-                        <input class="input-text" type="email" placeholder="Tu correo">
+                        <input class="input-text" name="correo" type="email" placeholder="Tu correo">
                     </div>
                     <div class="campo">
                         <label>Mensaje</label>
-                        <textarea class="input-text"></textarea>
+                        <textarea class="input-text" name="mensaje"></textarea>
                     </div>
                 </div>
                 <div class="alinear-derecha flex">
@@ -123,6 +123,7 @@
 
     <button id="btnTop" class="boton-ir-arriba">IR ARRIBA</button>
     <button id="btnDark" class="boton-dark-mode">🌙</button>
+    
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
